@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Sequence
 import itertools
 import random
-from cocos.sprite import CollidableSprite
+from thecoin.sprite import CollidableSprite
 
 
 @dataclass
