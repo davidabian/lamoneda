@@ -1,73 +1,68 @@
 """Rules logic."""
 import logging
-from pyknow import KnowledgeEngine, Fact, W, P, Rule, AND, AS, watch, DefFacts, DefFacts
+import random
+from pyknow import KnowledgeEngine
+from pyknow import Fact
+from pyknow import W
+from pyknow import P
+from pyknow import Rule
+from pyknow import AND
+from pyknow import OR
+from pyknow import NOT
+from pyknow import AS
+from pyknow import CALL
+from pyknow import watch
+from pyknow import DefFacts
 from pyknow.watchers import watch
-from thecoin.system import TimeAndSpace, World
+from thecoin.system import Being
+from thecoin.system import World
 
 logging.basicConfig(level=logging.DEBUG)
 
 watch("RULES", "FACTS", "AGENDA", "ACTIVATIONS")
 
 
-class WorldFact(Fact):
-    """WorldFact fact."""
-
-
-class PreviousWorldFact(Fact):
-    """WorldFact fact."""
-
-
-class Action(Fact):
-    """Define an action."""
-
-
-class WorldFactEvolution(KnowledgeEngine):
+class CharacterEvolution(KnowledgeEngine):
     """WorldFact evolution engine."""
 
     @DefFacts()
-    def start(self, state, action):  # noqa
+    def start(self, being):  # noqa
         """Define facts."""
-        yield PreviousWorldFact(population=state.world.population)
-        yield Fact(time=state.time)
-        yield Action(name=action)
+        yield Fact(being=being)
+        yield Fact(touched=being.touched)
 
     @Rule(
-        WorldFact(population=P(lambda p: p >= 10) & AS.population << W()),
-        salience=3)
-    def world_will_reproduce(self, population):
-        """World will reproduce."""
-        self.next_state = TimeAndSpace(
-            World(population=population * 2), time=self.time + 1)
-        print(f'Everyone will reproduce')
+        AND(Fact(being=AS.being << W()),
+            NOT(Fact(being=CALL.dead)),
+            NOT(Fact(touched=True))))
+    def is_not_dead(self, being):
+        """Current character is not dead."""
+        self.result.append(being)
 
-    @Rule(
-        WorldFact(population=P(lambda p: p < 10) & AS.population << W()),
-        salience=2)
-    def world_wont_reproduce(self, population):
-        """World will not reproduce, trim population."""
-        self.next_state = TimeAndSpace(
-            World(population=population / 2), time=self.time + 1)
-        print(f'Half population will die')
-
-    @Rule(
-        Action(name="kill"),
-        PreviousWorldFact(population=AS.population << W()),
-        salience=1)
-    def kill(self, population):
-        """Kill 10 people."""
-        print("KILL")
-        self.declare(WorldFact(population=population - 10))
+    @Rule(AND(Fact(being=CALL.reproduces), Fact(being=AS.being << W())))
+    def has_children(self, being):
+        """Will have children."""
+        children = random.randint(0, being.species.avg_number_children)
+        self.result.extend([Being(0, being.species) for _ in range(children)])
 
 
-def run(game, start_state, initial_population, action, expected_length):
+def run(game, start_state, initial_species=False, expected_length=500):
     """Run KE."""
+
     if not game.state:
-        game.state = [TimeAndSpace(World(initial_population), 0)]
+        game.state = [World(initial_species, 0)]
     # Remove future states, will be overwriten
     game.state = game.state[start_state:]
     while len(game.state) <= expected_length:
-        ken = WorldFactEvolution()
-        ken.time = len(game.state) + 1
-        ken.reset(state=game.state[-1], action=action)
-        ken.run()
-        game.state.append(ken.next_state)
+        world = game.state[-1]
+        species = []
+        for species in world.species:
+            current_specie = []
+            for being in species:
+                ken = CharacterEvolution()
+                ken.result = []
+                ken.reset(being)
+                ken.run()
+                current_specie.extend(ken.result)
+            species.append(current_specie)
+        game.state.append(World(species, world.time + 1))
