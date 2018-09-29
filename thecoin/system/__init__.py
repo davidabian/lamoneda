@@ -39,7 +39,9 @@ class Being:
     age: int
     species: Species
     touched: bool
-
+    pos_x: float  # in [0,1]
+    pos_y: float  # in [0,1]
+    
     def dead(self):
         """Return true if the being is dead on next iteration."""
         probability_by_age = self.age * self.species.factor_death_by_age
@@ -48,7 +50,11 @@ class Being:
     def reproduces(self):
         """Return true if user can reproduce."""
         return True
-
+    
+    @property
+    def sprite_name(self):
+        return self.being.species.name
+    
 
 @dataclass
 class World:
