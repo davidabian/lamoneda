@@ -11,4 +11,4 @@ class CollidableSprite(Sprite):
     def cshape(self):
         """Circle shape to find out collisions."""
         pos = self.x - self.anchor[0], self.y - self.anchor[1]
-        return cm.CircleShape(eu.Vector2(*pos), 50)
+        return cm.CircleShape(eu.Vector2(*pos), self.width / 2)

@@ -1,9 +1,11 @@
 """Interface."""
 
+from pathlib import Path
 from contextlib import suppress
 from dataclasses import dataclass
 from typing import Sequence
 import random
+import glob
 
 import cocos
 from cocos.text import Label
@@ -19,6 +21,10 @@ import pyglet.window.key
 
 from thecoin.sprite import CollidableSprite
 from thecoin.models import Being
+
+RESOURCES = str((Path('.').parent / 'sprites').absolute())
+pyglet.resource.path.append(RESOURCES)
+pyglet.resource.reindex()
 
 
 @dataclass
@@ -90,6 +96,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.add(background_sprite, z=0)
 
         self.game = game
+        self.toaster = None
         self.current_world = 0
         self.current_screen = 0
         self.space_used = 1
@@ -123,6 +130,15 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         self.explosions = []
         self.collision_manager.clear()
+        sprite = random.choice(glob.glob(RESOURCES + "/toaster*")).split('/')
+        if self.toaster:
+            self.remove(self.toaster)
+        self.toaster = Sprite(sprite[-1])
+        self.toaster.scale = 0.1
+        self.toaster.position = (2 * random.randint(0, self.width) / 3 +
+                                 self.width / 3), (random.randint(
+                                     0, round(2 * self.height / 3)))
+        self.add(self.toaster)
 
         self.current_screen += 1
         for character in self.characters:
@@ -142,6 +158,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         for elem in self.collision_manager.iter_colliding(self.main_character):
             self.sprites_by_id[id(elem)].touched = True
             explosion = Sprite('explosion.svg')
+            explosion.scale = 0.5
             explosion.position = elem.position
             self.explosions.append(explosion)
             with suppress(Exception):

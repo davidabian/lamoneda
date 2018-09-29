@@ -53,7 +53,7 @@ class Being:
         if not hasattr(self, '_sprite'):
             self._sprite = CollidableSprite(self.sprite_file)
             self._sprite.position = self.pos_x, self.pos_y
-            # self._sprite.scale = 0.5
+            self._sprite.scale = 0.5
         return self._sprite
 
     def dead(self):
