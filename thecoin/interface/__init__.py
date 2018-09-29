@@ -1,5 +1,6 @@
 import string
 import random
+
 from typing import Sequence
 
 from thecoin.system import Being
