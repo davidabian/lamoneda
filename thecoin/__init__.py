@@ -4,6 +4,8 @@ The Coin hackaton game
 """
 
 from docopt import docopt
+from thecoin.system import Game
+from thecoin.rules import run
 
 
 def main():
@@ -14,4 +16,6 @@ def main():
     Usage: thecoin [options]
     """
     options = docopt(main.__doc__)
-    return options
+    game = Game(state=[])
+    run(game, 0, 100, 'kill', 500)
+    print(game.state)

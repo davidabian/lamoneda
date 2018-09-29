@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f8d3ddbd85eb1c130881cfbcbc4444cf21337266548b7c31dc736018472b4c37"
+            "sha256": "541d8f3b2e4855cc66b82120bb5c55398758753f610c9bc54705e365ad2f3dd2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -22,6 +22,26 @@
             ],
             "index": "pypi",
             "version": "==0.6.2"
+        },
+        "frozendict": {
+            "hashes": [
+                "sha256:774179f22db2ef8a106e9c38d4d1f8503864603db08de2e33be5b778230f6e45"
+            ],
+            "version": "==1.2"
+        },
+        "pyknow": {
+            "hashes": [
+                "sha256:0460b0c948225a751ca35786390148461a2fdc38bc5cc303017cc6e872894341"
+            ],
+            "index": "pypi",
+            "version": "==1.7.0"
+        },
+        "schema": {
+            "hashes": [
+                "sha256:410f44cb025384959d20deef00b4e1595397fa30959947a4f0d92e9c84616f35",
+                "sha256:a058daf5d926e4ece9f13c4c2366a836143ca7913ef053c5023c569e00175b2a"
+            ],
+            "version": "==0.6.7"
         }
     },
     "develop": {
