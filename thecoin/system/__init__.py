@@ -37,6 +37,8 @@ class Species:
 class Being:
     """Being."""
     age: int
+    pos_x: int
+    pos_y: int
     species: Species
     touched: bool
 

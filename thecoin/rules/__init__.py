@@ -1,4 +1,5 @@
 """Rules logic."""
+from dataclasses import replace
 import logging
 import random
 from pyknow import KnowledgeEngine
@@ -37,7 +38,7 @@ class CharacterEvolution(KnowledgeEngine):
             NOT(Fact(touched=True))))
     def is_not_dead(self, being):
         """Current character is not dead."""
-        self.result.append(being)
+        self.result.append(replace(being))
 
     @Rule(AND(Fact(being=CALL.reproduces), Fact(being=AS.being << W())))
     def has_children(self, being):
@@ -46,13 +47,9 @@ class CharacterEvolution(KnowledgeEngine):
         self.result.extend([Being(0, being.species) for _ in range(children)])
 
 
-def run(game, start_state, initial_species=False, expected_length=500):
-    """Run KE."""
-
-    if not game.state:
-        game.state = [World(initial_species, 0)]
-    # Remove future states, will be overwriten
-    game.state = game.state[start_state:]
+def move_to(game, when, expected_length=500):
+    """Move to a specific position in time and recalculate the future."""
+    game.state = game.state[when:]
     while len(game.state) <= expected_length:
         world = game.state[-1]
         species = []

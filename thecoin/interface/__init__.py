@@ -48,5 +48,7 @@ class Interface:
         ]
         for character in self.characters:
             if not character.touched:
+                character.pos_x = random.randint(0, self.width)
+                character.pos_y = random.randint(0, round(self.height / 3))
                 random.choice(screens).characters.append(character)
         return screens
