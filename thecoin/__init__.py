@@ -23,12 +23,19 @@ class State:
     """State"""
     game = None
     current_world = 0
+    current_screen = 0
     space_used = 1
+    interface = None
 
     @staticmethod
     def world():
         """Get current world."""
         return State.game.state[State.current_world]
+
+    @staticmethod
+    def characters():
+        """Get current drawable characters"""
+        return State.interface.screens[State.current_screen].characters
 
 
 def update_pos(_):
@@ -43,14 +50,13 @@ def on_draw():
     img_background = pyglet.image.load('sprites/fondo_final.svg')
     img_background.blit(x=0, y=0, width=WINDOW.width, height=WINDOW.height)
     MAIN_CHARACTER.draw()
-    interface = Interface(5,
-                          State.world().characters, WINDOW.width,
-                          WINDOW.height)
+    print("Drawing main character")
 
-    for screen in interface.screens:
-        for character in screen.characters:
-            character.sprite.draw()
-            break
+    for character in State.characters():
+        print("Drawing character %s(%s): %s, %s" %
+              (id(character), character.species.name, character.pos_x,
+               character.pos_y))
+        character.sprite.draw()
 
 
 @WINDOW.event
@@ -99,7 +105,10 @@ def main():
 
     initial_world = World(species, 0)
     State.game = Game(state=[initial_world])
-    move_to(State.game, 0)
+    move_to(State.game, 0, 1)
+    State.interface = Interface(5,
+                                State.world().characters, WINDOW.width,
+                                WINDOW.height)
 
     pyglet.clock.schedule_interval(update_pos, FPS)
     pyglet.app.run()
