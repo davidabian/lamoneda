@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 from typing import Sequence
 import random
+import itertools
 
 
 @dataclass
@@ -63,6 +64,10 @@ class World:
 
     # [0,1000]
     time: int
+    
+    @property
+    def characters(self):
+        return  itertools.chain(*[a.beings for a in self.species])
 
 
 @dataclass

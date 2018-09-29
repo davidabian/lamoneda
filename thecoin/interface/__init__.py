@@ -7,6 +7,7 @@ from thecoin.system import Being
 from builtins import int
 from dataclasses import dataclass
 
+@dataclass
 class Screen:
     """..."""
     id: int
@@ -19,7 +20,7 @@ class Screen:
         return [random.choice(sprites) 
                 for _ in range(random.randint(sprites_per_screen))]
 
-@dataclasss
+@dataclass
 class Interface:
     """..."""
     num_screens: int
