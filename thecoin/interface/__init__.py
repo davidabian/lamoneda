@@ -42,13 +42,19 @@ class Interface:
             while True:
                 for screen in interface.screens:
         """
-        screens = [
-            Screen(i, self.width, self.height, [])
-            for i in range(self.num_screens)
-        ]
-        for character in self.characters:
-            if not character.touched:
-                character.pos_x = random.randint(0, self.width)
-                character.pos_y = random.randint(0, round(self.height / 3))
-                random.choice(screens).characters.append(character)
-        return screens
+        # TODO: rename num_screens by num_characters_by_screen
+
+        if not hasattr(self, '_screens'):
+            characters_ = list(self.characters)
+            total_characters = len(characters_)
+            num_screens = round(total_characters / self.num_screens)
+            self._screens = [
+                Screen(i, self.width, self.height, [])
+                for i in range(num_screens)
+            ]
+            for character in characters_:
+                if not character.touched:
+                    character.pos_x = random.randint(0, self.width)
+                    character.pos_y = random.randint(0, round(self.height / 3))
+                    random.choice(self._screens).characters.append(character)
+        return self._screens
