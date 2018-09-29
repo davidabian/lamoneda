@@ -25,6 +25,39 @@ Usage
     Usage: thecoin [options]
 
 
+Game mechanics
+--------------
+
+The game consist on a time-series status of a world, with only a limited set of variables describing it::
+    Game = [
+        TimeAndSpace(World(species=[Species1(reproduction_index=20, death_age=30, ...),
+                                    Species2(reproduction_index=30, death_age=40, ...)]),
+                           time=1),
+        TimeAndSpace(World(species=[Species1(reproduction_index=20, death_age=30, ...),
+                                    Species2(reproduction_index=30, death_age=40, ...)]),
+                           time=2)]
+
+
+At start, the user will see himself on a world with an initial state, raw, and
+will have to avoid killing or interacting with any creatures. Any interaction
+with any creature will trigger an action at the end of the level, wich will
+potentially make big changes in the future.
+
+At the end of the level, the user will be given a choice, WHEN to travel in its
+toaster-based time machine, given it can travel to a max lenght in the future, and
+to the first defined state in the past.
+
+The creatures shown in the platform-like part of the game will be a
+representation of the species statuses, i.e, if there are 3 million individuals
+of one species, and one million individuals of another one, there could be 1
+creature of the latest and 3 of the first.
+
+This is represented that way because of the infinite-world nature of the game, as
+it will keep going forever, each "screen" (as it rolls out to the next one)
+will have a small representation of individuals, tough "touched" individuals
+will be removed from any available screens, making it possible (way more
+possible at the first of the game) to run out of creatures in the whole world.
+
 Distributing
 ------------
 
