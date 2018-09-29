@@ -3,11 +3,12 @@
 The Coin hackaton game
 """
 
-import configparser
-import random
+from contextlib import suppress
 from docopt import docopt
-import pyglet
 from pathlib import Path
+import configparser
+import pyglet
+import random
 
 import cocos
 from cocos.text import Label
@@ -28,16 +29,16 @@ pyglet.resource.path.append(str((Path('.').parent / 'sprites').absolute()))
 pyglet.resource.reindex()
 
 
-class MainScene(cocos.layer.ColorLayer, Layer):
+class RunnerLayer(cocos.layer.ColorLayer, Layer):
     """State"""
 
     is_event_handler = True
 
     def __init__(self, game, interface):
-        super( MainScene, self ).__init__(211,214,246,255)
+        super(RunnerLayer, self).__init__(211, 214, 246, 255)
 
         background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
-        background_sprite.position = (0,0)
+        background_sprite.position = (0, 0)
         background_sprite.scale = 0.1
         self.add(background_sprite, z=0)
 
@@ -51,15 +52,39 @@ class MainScene(cocos.layer.ColorLayer, Layer):
         self.collision_manager.add(self.main_character)
         self.add(self.main_character)
         self.sprites_by_id = {}
+        self.explosions = []
+
+        self.do_draw()
+
+        self.schedule_interval(self.check_collisions, 0.1)
+        self.schedule_interval(self.check_finished, 0.1)
+
+    def do_draw(self):
+        """Draw a screen."""
+        self.main_character.x = 0
+        self.main_character.y = 0
+        self.main_character.do(
+            MoveTo((self.interface.width, self.main_character.y), 10))
+
+        for character in self.characters:
+            with suppress(Exception):
+                self.remove(character)
+
+        for explosion in self.explosions:
+            with suppress(Exception):
+                self.remove(explosion)
+        self.explosions = []
+
+        self.current_screen += 1
         for character in self.characters:
             self.sprites_by_id[id(character.sprite)] = character
             self.collision_manager.add(character.sprite)
             self.add(character.sprite)
 
-        self.main_character.do(
-            MoveTo((self.interface.width, self.main_character.y), 10))
-
-        self.schedule_interval(self.check_collisions, 0.1)
+    def check_finished(self, *args, **kwargs):
+        """Check if has finished."""
+        if self.main_character.x > self.interface.width:
+            self.do_draw()
 
     def check_collisions(self, *args, **kwargs):
         """Check for collisions."""
@@ -67,11 +92,11 @@ class MainScene(cocos.layer.ColorLayer, Layer):
             self.sprites_by_id[id(elem)].touched = True
             explosion = Sprite('explosion.svg')
             explosion.position = elem.position
-            try:
+            self.explosions.append(explosion)
+            with suppress(Exception):
                 self.remove(elem)
-            except:
-                pass
             self.add(explosion)
+        self.collision_manager.clear()
 
     def on_key_press(self, key, _):
         """Jumps."""
@@ -128,4 +153,4 @@ def main():
     director.init()
     interface = Interface(5, game.state[0].characters,
                           *director.get_window_size())
-    director.run(scene.Scene(MainScene(game, interface)))
+    director.run(scene.Scene(RunnerLayer(game, interface)))
