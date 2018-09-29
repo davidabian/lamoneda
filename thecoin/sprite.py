@@ -7,6 +7,8 @@ import cocos.collision_model as cm
 class CollidableSprite(Sprite):
     """Collidable sprite."""
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.cshape = cm.CircleShape(eu.Vector2(*self.anchor), 100)
+    @property
+    def cshape(self):
+        """Circle shape to find out collisions."""
+        pos = self.x - self.anchor[0], self.y - self.anchor[1]
+        return cm.CircleShape(eu.Vector2(*pos), 50)

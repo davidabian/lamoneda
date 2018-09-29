@@ -68,18 +68,22 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         for character in self.characters:
             with suppress(Exception):
-                self.remove(character)
+                self.remove(character.sprite)
 
         for explosion in self.explosions:
             with suppress(Exception):
                 self.remove(explosion)
+
         self.explosions = []
+        self.collision_manager.clear()
 
         self.current_screen += 1
         for character in self.characters:
             self.sprites_by_id[id(character.sprite)] = character
             self.collision_manager.add(character.sprite)
             self.add(character.sprite)
+
+        self.draw()
 
     def check_finished(self, *args, **kwargs):
         """Check if has finished."""
@@ -96,7 +100,6 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
             with suppress(Exception):
                 self.remove(elem)
             self.add(explosion)
-        self.collision_manager.clear()
 
     def on_key_press(self, key, _):
         """Jumps."""
