@@ -14,7 +14,7 @@
    viewBox="0 0 25.877504 52.916987"
    version="1.1"
    id="svg3598"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="ppepotato.svg">
   <defs
      id="defs3592" />
@@ -26,15 +26,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="-71.071409"
-     inkscape:cy="83.863021"
+     inkscape:cx="-135.09249"
+     inkscape:cy="148.98135"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="716"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1305"
+     inkscape:window-height="744"
+     inkscape:window-x="55"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -49,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,7 +59,7 @@
      id="layer1"
      transform="translate(-93.169715,-93.623321)">
     <rect
-       style="fill:#8c94e6;fill-opacity:1;stroke:#ffffff;stroke-width:0.92518002;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#8c94e6;fill-opacity:1;stroke:#ffffff;stroke-width:0.92531256;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect4164"
        width="24.653564"
        height="35.319294"
@@ -99,7 +99,7 @@
        y="110.58358"
        ry="4.7208962" />
     <circle
-       style="fill:#111750;fill-opacity:1;stroke:none;stroke-width:0.92518002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#111750;fill-opacity:1;stroke:#ffffff;stroke-width:0.92531256;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="path4143"
        cx="106.10847"
        cy="106.56207"
