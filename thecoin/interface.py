@@ -130,15 +130,15 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         self.explosions = []
         self.collision_manager.clear()
-        sprite = random.choice(glob.glob(RESOURCES + "/toaster*")).split('/')
         if self.toaster:
             self.remove(self.toaster)
-        self.toaster = Sprite(sprite[-1])
+        self.toaster = CollidableSprite("toaster00.svg")
         self.toaster.scale = 0.1
         self.toaster.position = (2 * random.randint(0, self.width) / 3 +
                                  self.width / 3), (random.randint(
                                      0, round(2 * self.height / 3)))
         self.add(self.toaster)
+        self.collision_manager.add(self.toaster)
 
         self.current_screen += 1
         for character in self.characters:
@@ -156,11 +156,22 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
     def check_collisions(self, *args, **kwargs):
         """Check for collisions."""
         for elem in self.collision_manager.iter_colliding(self.main_character):
+            if elem == self.toaster:
+                position = self.toaster.position
+                self.remove(self.toaster)
+                self.toaster = CollidableSprite("toaster01.svg")
+                self.toaster.scale = 0.1
+                self.toaster.position = position
+                self.add(self.toaster)
+                continue
+            if not id(elem) in self.sprites_by_id:
+                continue
             self.sprites_by_id[id(elem)].touched = True
             explosion = Sprite('explosion.svg')
             explosion.scale = 0.5
             explosion.position = elem.position
             self.explosions.append(explosion)
+
             with suppress(Exception):
                 self.remove(elem)
             self.add(explosion)
