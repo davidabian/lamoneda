@@ -11,7 +11,7 @@ from thecoin.system import Game, World, Species, Being
 from thecoin.interface import Interface
 from thecoin.rules import move_to
 
-FPS = 1.0 / 30
+FPS = 1.0 / 170
 
 WINDOW = pyglet.window.Window(fullscreen=True)
 
@@ -49,14 +49,18 @@ def on_draw():
     WINDOW.clear()
     img_background = pyglet.image.load('sprites/fondo_final.svg')
     img_background.blit(x=0, y=0, width=WINDOW.width, height=WINDOW.height)
+
+    MAIN_CHARACTER.y = 0
+    if State.space_used:
+        State.space_used = False
+        MAIN_CHARACTER.y += 200
+
     MAIN_CHARACTER.draw()
-    print("Drawing main character")
 
     for character in State.characters():
-        print("Drawing character %s(%s): %s, %s" %
-              (id(character), character.species.name, character.pos_x,
-               character.pos_y))
         character.sprite.draw()
+        if character.collisions(MAIN_CHARACTER.x, MAIN_CHARACTER.y):
+            character.touched = True
 
 
 @WINDOW.event

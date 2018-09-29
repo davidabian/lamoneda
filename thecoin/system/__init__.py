@@ -50,9 +50,9 @@ class Being:
     def sprite(self):
         """Return a pyglet sprite."""
         if not hasattr(self, '_sprite'):
-            self._sprite = pyglet.sprite.Sprite(
-                pyglet.image.load('sprites/' + self.sprite_name + '.svg'),
-                self.pos_x, self.pos_y)
+            image = pyglet.image.load('sprites/' + self.sprite_name + '.svg')
+            self._sprite = pyglet.sprite.Sprite(image, self.pos_x, self.pos_y)
+            self._sprite.scale = 0.5
         return self._sprite
 
     def dead(self):
