@@ -59,7 +59,7 @@ class CharacterEvolution(KnowledgeEngine):
         self.result.extend([Being(0, being.species) for _ in range(children)])
 
 
-def move_to(game, when, expected_length=50):
+def move_to(game, when, expected_length=10):
     """Move to a specific position in time and recalculate the future."""
     game.state = game.state[when:]
     while len(game.state) < expected_length:

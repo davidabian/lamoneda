@@ -9,6 +9,7 @@ name = "pypi"
 
 docopt = "*"
 pyknow = "*"
+pyglet = "*"
 
 
 [dev-packages]

@@ -4,9 +4,65 @@ The Coin hackaton game
 """
 
 import configparser
+import random
 from docopt import docopt
+import pyglet
 from thecoin.system import Game, World, Species, Being
+from thecoin.interface import Interface
 from thecoin.rules import move_to
+
+FPS = 1.0 / 30
+
+WINDOW = pyglet.window.Window(fullscreen=True)
+
+MAIN_CHARACTER = pyglet.sprite.Sprite(
+    pyglet.image.load('sprites/ppepotato.svg'), 0, 0)
+
+
+class State:
+    """State"""
+    game = None
+    current_world = 0
+    space_used = 1
+
+    @staticmethod
+    def world():
+        """Get current world."""
+        return State.game.state[State.current_world]
+
+
+def update_pos(_):
+    """Update position, just advance main user."""
+    MAIN_CHARACTER.x += 10
+
+
+@WINDOW.event
+def on_draw():
+    """Run each draw."""
+    WINDOW.clear()
+    img_background = pyglet.image.load('sprites/fondo_final.svg')
+    img_background.blit(x=0, y=0, width=WINDOW.width, height=WINDOW.height)
+    MAIN_CHARACTER.draw()
+    interface = Interface(5,
+                          State.world().characters, WINDOW.width,
+                          WINDOW.height)
+
+    for screen in interface.screens:
+        for character in screen.characters:
+            character.sprite.draw()
+            break
+
+
+@WINDOW.event
+def on_key_press(symbol, _):
+    """On key press."""
+    State.space_used = symbol == pyglet.window.key.SPACE
+
+
+@WINDOW.event
+def on_symbol_release(symbol, _):
+    """On key press."""
+    State.space_used = symbol == pyglet.window.key.SPACE
 
 
 def main():
@@ -42,5 +98,8 @@ def main():
         species.append(specie)
 
     initial_world = World(species, 0)
-    game = Game(state=[initial_world])
-    move_to(game, 0)
+    State.game = Game(state=[initial_world])
+    move_to(State.game, 0)
+
+    pyglet.clock.schedule_interval(update_pos, FPS)
+    pyglet.app.run()
