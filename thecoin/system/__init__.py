@@ -1,11 +1,13 @@
 """Base system."""
 from dataclasses import dataclass
-
+from types import
 
 @dataclass
 class World:
     """Base world"""
     population: int
+
+    species: Mapping[Species]
 
 @dataclass
 class TimeAndSpace:
@@ -18,10 +20,19 @@ class TimeAndSpace:
     # [-100,100]
     temperature: float
 
+
+
 @dataclass
 class Game:
     """TimeAndSpace list"""
     state: list
+
+
+@dataclass
+class Being:
+    age: int
+    species: Species
+
 
 @dataclass
 class Species:
@@ -30,9 +41,11 @@ class Species:
     # name (ID) of the species
     name: str
 
-    # number of individuals
-    population: int
+    beings: Mapping[Being]
 
+    @property
+    def population(self):
+        return len(self.beings)
     # sprite for species' city
     #sprite_city: str
 
