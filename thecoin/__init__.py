@@ -43,3 +43,4 @@ def main():
 
     initial_world = World(species, 0)
     game = Game(state=[initial_world])
+    move_to(game, 0)
