@@ -3,7 +3,6 @@
 The Coin hackaton game
 """
 
-from pathlib import Path
 import configparser
 import random
 
@@ -17,9 +16,6 @@ from thecoin.models import Game, World, Species, Being
 from thecoin.interface import RunnerLayer
 from thecoin.interface import Interface
 from thecoin.rules import move_to
-
-pyglet.resource.path.append(str((Path('.').parent / 'sprites').absolute()))
-pyglet.resource.reindex()
 
 
 def main():
