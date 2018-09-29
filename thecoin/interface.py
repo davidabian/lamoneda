@@ -86,6 +86,7 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface):
         super(ToasterLayer, self).__init__(211, 214, 246, 255)
         toaster_sprite = Sprite('toaster11.svg')
+        toaster_sprite.scale = 0.5
         toaster_sprite.position = (director.get_window_size()[0] / 2, director.get_window_size()[1] / 2)
         self.add(toaster_sprite)
 
