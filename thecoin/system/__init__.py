@@ -1,6 +1,6 @@
 """Base system."""
 from dataclasses import dataclass
-from typing import Mapping
+from typing import Sequence
 import random
 
 
@@ -11,7 +11,7 @@ class Species:
     # name (ID) of the species
     name: str
 
-    beings: Mapping
+    beings: Sequence
 
     @property
     def population(self):
@@ -53,7 +53,7 @@ class Being:
 @dataclass
 class World:
     """Position in time and space (state)."""
-    species: Mapping[Species]
+    species: Sequence[Species]
 
     # [0,1000]
     time: int
@@ -62,4 +62,4 @@ class World:
 @dataclass
 class Game:
     """TimeAndSpace list"""
-    state: Mapping[World]
+    state: Sequence[World]
