@@ -20,7 +20,7 @@ from cocos.collision_model import CollisionManagerBruteForce
 from cocos.sprite import Sprite
 import pyglet.window.key
 
-from thecoin.system import Game, World, Species, Being
+from thecoin.models import Game, World, Species, Being
 from thecoin.interface import Interface
 from thecoin.rules import move_to
 from thecoin.sprite import CollidableSprite
