@@ -82,7 +82,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
     is_event_handler = True
 
     def __init__(self, game, interface):
-        super(RunnerLayer, self).__init__(211, 214, 246, 255)
+        super(RunnerLayer, self).__init__(242, 242, 242, 255)
 
         background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
         background_sprite.position = (0, 0)
