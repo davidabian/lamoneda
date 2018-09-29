@@ -1,9 +1,10 @@
 """Base system."""
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Sequence
-import random
 import itertools
-import pyglet
+import random
+from cocos.sprite import CollidableSprite
 
 
 @dataclass
@@ -50,9 +51,9 @@ class Being:
     def sprite(self):
         """Return a pyglet sprite."""
         if not hasattr(self, '_sprite'):
-            self._sprite = pyglet.sprite.Sprite(
-                pyglet.image.load('sprites/' + self.sprite_name + '.svg'),
-                self.pos_x, self.pos_y)
+            self._sprite = CollidableSprite(self.sprite_file)
+            self._sprite.position = self.pos_x, self.pos_y
+            # self._sprite.scale = 0.5
         return self._sprite
 
     def dead(self):
@@ -65,9 +66,9 @@ class Being:
         return True
 
     @property
-    def sprite_name(self):
+    def sprite_file(self):
         """Return sprite name"""
-        return self.species.name
+        return self.species.name + '.svg'
 
 
 @dataclass
