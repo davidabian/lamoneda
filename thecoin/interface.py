@@ -86,8 +86,8 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface):
         super(ToasterLayer, self).__init__(211, 214, 246, 255)
         toaster_sprite = Sprite('toaster11.svg')
-        toaster_sprite.position = (director.get_window_size()[0] / 2, director.get_window_size()[1] / 2,)
-        toaster_sprite.draw()
+        toaster_sprite.position = (director.get_window_size()[0] / 2, director.get_window_size()[1] / 2)
+        self.add(toaster_sprite)
 
 
 class RunnerLayer(cocos.layer.ColorLayer, Layer):
@@ -190,7 +190,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
             self.main_character.do(
                 JumpTo((self.main_character.x + 50, 10), 100, 1, 0.8))
         elif key == pyglet.window.key.A:
-            director.run(scene.Scene(ToasterLayer(game, interface)))
+            director.run(scene.Scene(ToasterLayer(self.game, self.interface)))
 
     @property
     def world(self):
