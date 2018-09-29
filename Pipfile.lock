@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ea4a35bf2b3a120215b7e44f6959eb758c8335b4df495f2ff8cb8473165e5c2a"
+            "sha256": "4c90e348681a12bcc6b84ab2848dc4b4bd85447804931ed4cdb7ea539ee3d8ec"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,13 @@
         ]
     },
     "default": {
+        "cocos2d": {
+            "hashes": [
+                "sha256:2d0b429616d59792035f376d80daeb7e7f5ec602e49ff4176be8204232606b49"
+            ],
+            "index": "pypi",
+            "version": "==0.6.5"
+        },
         "docopt": {
             "hashes": [
                 "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
@@ -56,6 +63,13 @@
                 "sha256:a058daf5d926e4ece9f13c4c2366a836143ca7913ef053c5023c569e00175b2a"
             ],
             "version": "==0.6.7"
+        },
+        "six": {
+            "hashes": [
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
+            ],
+            "version": "==1.11.0"
         }
     },
     "develop": {

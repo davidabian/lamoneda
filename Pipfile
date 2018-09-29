@@ -10,6 +10,7 @@ name = "pypi"
 docopt = "*"
 pyknow = "*"
 pyglet = "*"
+"cocos2d" = "*"
 
 
 [dev-packages]
