@@ -1,37 +1,7 @@
 """Base system."""
 from dataclasses import dataclass
-from types import
-
-@dataclass
-class World:
-    """Base world"""
-    population: int
-
-    species: Mapping[Species]
-
-@dataclass
-class TimeAndSpace:
-    """Position in time and space (state)."""
-    world: World
-
-    # [0,1000]
-    time: int
-
-    # [-100,100]
-    temperature: float
-
-
-
-@dataclass
-class Game:
-    """TimeAndSpace list"""
-    state: list
-
-
-@dataclass
-class Being:
-    age: int
-    species: Species
+from typing import Mapping
+import random
 
 
 @dataclass
@@ -41,29 +11,55 @@ class Species:
     # name (ID) of the species
     name: str
 
-    beings: Mapping[Being]
+    beings: Mapping
 
     @property
     def population(self):
+        """Population."""
         return len(self.beings)
-    # sprite for species' city
-    #sprite_city: str
 
-    # [0,1], apriori probability of dying in a given time
-    factor_aging: float
+    # Float: Multiplier for death probability by aging (i.e, age * this) ==
+    # probability of dying
+    factor_death_by_age: float
 
-    # [0,1], apriori probability of having a reproduction in a given time
+    # Float: Inverse multiplier for reproduction probability (i.e, age * -this)
+    # == probabily of reproducing
     factor_reproductive_arity: float
 
-    # [0,1]
+    # Float, just specify if this is a tech_based society
     factor_tech_development: float
 
-    # [1,n], avg number of children in each reprodution
+    # Average number of children for each time it reproduces
     avg_number_children: int
 
-    # [-100,100]
-    ideal_temperature: float
 
-    # [-100,100]
-    temperature_adaptability: float
+@dataclass
+class Being:
+    """Being."""
+    age: int
+    species: Species
+    touched: bool
 
+    def dead(self):
+        """Return true if the being is dead on next iteration."""
+        probability_by_age = self.age * self.species.factor_death_by_age
+        return probability_by_age > 100
+
+    def reproduces(self):
+        """Return true if user can reproduce."""
+        return True
+
+
+@dataclass
+class World:
+    """Position in time and space (state)."""
+    species: Mapping[Species]
+
+    # [0,1000]
+    time: int
+
+
+@dataclass
+class Game:
+    """TimeAndSpace list"""
+    state: Mapping[World]
