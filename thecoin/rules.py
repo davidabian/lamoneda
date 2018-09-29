@@ -17,9 +17,9 @@ from pyknow import DefFacts
 from pyknow.watchers import watch
 from pyknow.utils import freeze
 from pyknow.utils import frozendict
-from thecoin.system import Being
-from thecoin.system import Species
-from thecoin.system import World
+from thecoin.models import Being
+from thecoin.models import Species
+from thecoin.models import World
 
 # logging.basicConfig(level=logging.DEBUG)
 # watch("RULES", "FACTS", "AGENDA", "ACTIVATIONS")
