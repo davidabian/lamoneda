@@ -25,7 +25,6 @@ class Screen:
             for _ in range(random.randint(0, sprites_per_screen))
         ]
 
-
 @dataclass
 class Interface:
     """Represents the game interface"""
@@ -42,15 +41,13 @@ class Interface:
             while True:
                 for screen in interface.screens:
         """
-        # TODO: rename num_screens by num_characters_by_screen
-
         if not hasattr(self, '_screens'):
             characters_ = list(self.characters)
             total_characters = len(characters_)
-            num_screens = round(total_characters / self.num_screens)
+            num_characters_by_screen = round(total_characters / self.num_screens)
             self._screens = [
                 Screen(i, self.width, self.height, [])
-                for i in range(num_screens)
+                for i in range(num_characters_by_screen)
             ]
             for character in characters_:
                 if not character.touched:
