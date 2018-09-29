@@ -28,13 +28,19 @@ pyglet.resource.path.append(str((Path('.').parent / 'sprites').absolute()))
 pyglet.resource.reindex()
 
 
-class MainScene(Layer):
+class MainScene(cocos.layer.ColorLayer, Layer):
     """State"""
 
     is_event_handler = True
 
     def __init__(self, game, interface):
-        super().__init__()
+        super( MainScene, self ).__init__(211,214,246,255)
+
+        background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
+        background_sprite.position = (0,0)
+        background_sprite.scale = 0.1
+        self.add(background_sprite, z=0)
+
         self.game = game
         self.current_world = 0
         self.current_screen = 0
