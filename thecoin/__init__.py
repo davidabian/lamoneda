@@ -14,6 +14,7 @@ from docopt import docopt
 
 from thecoin.models import Game, World, Species, Being
 from thecoin.interface import RunnerLayer
+from thecoin.interface import ToasterLayer
 from thecoin.interface import Interface
 from thecoin.rules import move_to
 
@@ -52,8 +53,15 @@ def main():
 
     initial_world = World(species, 0)
     game = Game(state=[initial_world])
-    move_to(game, 0, 1)
+    move_to(game, 0, 5)
     director.init()
     interface = Interface(5, game.state[0].characters,
                           *director.get_window_size())
-    director.run(scene.Scene(RunnerLayer(game, interface)))
+    meta = {}
+    runner = RunnerLayer(game, interface, meta)
+    toaster = ToasterLayer(game, interface, meta)
+    meta['scenes'] = {
+        'runner': scene.Scene(runner),
+        'toaster': scene.Scene(toaster)
+    }
+    director.run(meta['scenes']['runner'])

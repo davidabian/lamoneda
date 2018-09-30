@@ -12,6 +12,7 @@ from cocos.text import Label
 from cocos import scene
 from cocos.layer import Layer
 from cocos.director import director
+from cocos.scenes import FadeTRTransition
 from cocos.actions import JumpTo, MoveTo
 from cocos.collision_model import CollisionManagerBruteForce
 from cocos.sprite import Sprite
@@ -21,6 +22,7 @@ import pyglet.window.key
 
 from thecoin.sprite import CollidableSprite
 from thecoin.models import Being
+from thecoin.rules import move_to
 
 RESOURCES = str((Path('.').parent / 'sprites').absolute())
 pyglet.resource.path.append(RESOURCES)
@@ -83,12 +85,35 @@ class Interface:
 
 
 class ToasterLayer(cocos.layer.ColorLayer, Layer):
-    def __init__(self, game, interface):
-        super(ToasterLayer, self).__init__(211, 214, 246, 255)
+    """Travel trough time."""
+
+    def __init__(self, game, interface, meta):
+        super().__init__(211, 214, 246, 255)
+        self.game = game
+        self.meta = meta
+        self.interface = interface
+
         toaster_sprite = Sprite('toaster11.svg')
         toaster_sprite.scale = 0.5
-        toaster_sprite.position = (director.get_window_size()[0] / 2, director.get_window_size()[1] / 2)
+        toaster_sprite.position = (director.get_window_size()[0] / 2,
+                                   director.get_window_size()[1] / 2)
         self.add(toaster_sprite)
+        self.label = Label(font_name="Helvetica", font_size=50)
+        self.label.position = (toaster_sprite.position[0] - 110,
+                               toaster_sprite.position[0] - 175)
+        self.add(self.label)
+        self.timer = 0
+        self.schedule_interval(self.update_timer, 1)
+
+    def update_timer(self, *args, **kwargs):
+        """Update timer."""
+        if self.timer >= len(self.game.state):
+            move_to(self.game, self.timer - 1, len(self.game.state) + 5)
+            director.replace(FadeTRTransition(self.meta['scenes']['runner']))
+
+        self.timer += 1
+        self.label.element.text = "%s -> %s" % (self.meta["current_world"],
+                                                str(self.timer))
 
 
 class RunnerLayer(cocos.layer.ColorLayer, Layer):
@@ -96,8 +121,8 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
     is_event_handler = True
 
-    def __init__(self, game, interface):
-        super(RunnerLayer, self).__init__(242, 242, 242, 255)
+    def __init__(self, game, interface, meta):
+        super().__init__(242, 242, 242, 255)
 
         background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
         background_sprite.position = (0, 0)
@@ -106,7 +131,9 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         self.game = game
         self.toaster = None
-        self.current_world = 0
+        self.meta = meta
+
+        self.meta["current_world"] = 0
         self.current_screen = 0
         self.space_used = 1
         self.interface = interface
@@ -172,6 +199,8 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                 self.toaster.scale = 0.1
                 self.toaster.position = position
                 self.add(self.toaster)
+                director.replace(
+                    FadeTRTransition(self.meta['scenes']['toaster']))
                 continue
             if not id(elem) in self.sprites_by_id:
                 continue
@@ -190,13 +219,11 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         if key == pyglet.window.key.SPACE:
             self.main_character.do(
                 JumpTo((self.main_character.x + 50, 10), 100, 1, 0.8))
-        elif key == pyglet.window.key.A:
-            director.run(scene.Scene(ToasterLayer(self.game, self.interface)))
 
     @property
     def world(self):
         """Get current world."""
-        return self.game.state[self.current_world]
+        return self.game.state[self.meta["current_world"]]
 
     @property
     def characters(self):
