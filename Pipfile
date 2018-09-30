@@ -1,12 +1,26 @@
 [[source]]
-name = "pypi"
+
+url = "https://pypi.python.org/simple"
 verify_ssl = true
-url = "https://pypi.org/simple"
+name = "pypi"
+
+
+[packages]
+
+docopt = "*"
+pyknow = "*"
+pyglet = "*"
+"cocos2d" = "*"
+
 
 [dev-packages]
 
-[requires]
-python_version = "3.7"
+behave = "*"
+pytest = "*"
+pytest-cov = "*"
+"pytest-flake8" = "*"
 
-[packages]
-pyglet = "*"
+
+[requires]
+
+python_version = "3.7"
