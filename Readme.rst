@@ -58,6 +58,33 @@ will have a small representation of individuals, tough "touched" individuals
 will be removed from any available screens, making it possible (way more
 possible at the first of the game) to run out of creatures in the whole world.
 
+The game is as simple as it gets, it scrolls at a stable speed, and you can
+"flap" (like the famous flappy bird) by jumping in the air, with the space key.
+It is an infinite map, as soon as you don't kill all the living things, in wich
+case you'll be stuck on a dead, sad world.
+
+As you "kill" native species such as mosquitoes, giant faces balls, and
+amoebas, they'll be replaced by a cross.
+
+You'll find TWO toasters, one of the will take you to 5 years into the future
+and the other one 5 years into the past.
+
+The game will predict the next five years using an expert system as soon as you
+travel, having standard biological factors, such as species diversity,
+reproductive capacity aging and death. Your changes in the past will heavily
+affect how the ecosystem develops in the future.
+
+This game:
+
+- Has only one color
+- Can be controlled with only one keystroke
+- Represents the butterfly effect in biological ecosystems trough time
+- It does not have any text (yet it does have a number)
+- It is an infinite game
+- It is a 2D game
+
+
+
 Distributing
 ------------
 
