@@ -58,12 +58,11 @@ class Being:
 
     def dead(self):
         """Return true if the being is dead on next iteration."""
-        probability_by_age = self.species.factor_death_by_age
-        return probability_by_age > 100
+        return self.species.factor_death_by_age*100 > random.randint(1,101)
 
     def reproduces(self):
         """Return true if the being reproduces."""
-        return factor_reproductive_arity*100 > random.randint(1,101)
+        return self.species.factor_reproductive_arity*100 > random.randint(1,101)
 
     @property
     def sprite_file(self):
