@@ -111,9 +111,18 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
             self.meta['current_world'] = self.timer
             self.meta['switch_world'] = True
             move_to(self.game, self.timer - 1, len(self.game.state) + 5)
-            director.replace(FadeTRTransition(self.meta['scenes']['runner']))
+            return director.replace(
+                FadeTRTransition(self.meta['scenes']['runner']))
 
-        self.timer += 1
+        if self.meta.get('direction_future'):
+            self.timer += 1
+        else:
+            self.timer -= 1
+            if self.timer < 0:
+                self.timer = 0
+                move_to(self.game, 0, len(self.game.state))
+                return director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
         self.label.element.text = "%s -> %s" % (self.meta["current_world"],
                                                 str(self.timer))
 
@@ -133,6 +142,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         self.game = game
         self.toaster = None
+        self.toaster_back = None
         self.meta = meta
 
         self.meta["current_world"] = 0
@@ -178,6 +188,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.collision_manager.clear()
         if self.toaster:
             self.remove(self.toaster)
+
         self.toaster = CollidableSprite("toaster00.svg")
         self.toaster.scale = 0.1
         self.toaster.position = (2 * random.randint(0, self.width) / 3 +
@@ -185,6 +196,14 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                                      0, round(2 * self.height / 3)))
         self.add(self.toaster)
         self.collision_manager.add(self.toaster)
+
+        self.toaster_back = CollidableSprite("toaster00.svg")
+        self.toaster_back.scale = 0.1
+        self.toaster_back.position = (2 * random.randint(0, self.width) / 3 +
+                                      self.width / 3), (random.randint(
+                                          0, round(2 * self.height / 3)))
+        self.add(self.toaster_back)
+        self.collision_manager.add(self.toaster_back)
 
         self.current_screen += 1
         for character in self.characters:
@@ -208,11 +227,24 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         for elem in self.collision_manager.iter_colliding(self.main_character):
             if elem == self.toaster:
                 position = self.toaster.position
+                self.meta['direction_future'] = True
                 self.remove(self.toaster)
                 self.toaster = CollidableSprite("toaster01.svg")
                 self.toaster.scale = 0.1
                 self.toaster.position = position
                 self.add(self.toaster)
+                director.replace(
+                    FadeTRTransition(self.meta['scenes']['toaster']))
+
+            if elem == self.toaster_back:
+                position = self.toaster_back.position
+                self.meta['direction_future'] = False
+                self.remove(self.toaster_back)
+                self.toaster_back = CollidableSprite("toaster10.svg")
+                self.toaster_back.scale = 0.1
+                self.toaster_back.position = position
+                self.add(self.toaster_back)
+
                 director.replace(
                     FadeTRTransition(self.meta['scenes']['toaster']))
                 continue
