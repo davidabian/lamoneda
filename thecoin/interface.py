@@ -172,7 +172,7 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
         else:
             self.timer -= 1
             if self.timer <= 0:
-                self.timer = 1
+                self.timer = 0
 
         if future and self.timer == self.meta["current_world"] + 5:
             self.meta['current_world'] = self.meta['current_world'] + 5
@@ -202,14 +202,12 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface, meta):
         super().__init__(242, 242, 242, 255)
 
-
+        self.background = Sprite('fondo_final.svg', anchor=(0, 0))
+        self.background.position = (0, 0)
+        self.background.scale = 0.1
+        self.add(self.background, z=0)
         self.has_ran = False
         self.schedule_interval(self.run, 4)
-
-        background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
-        background_sprite.position = (0, 0)
-        background_sprite.scale = 0.1
-        self.add(background_sprite, z=0)
 
         self.game = game
         self.toaster = None
@@ -247,21 +245,12 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.main_character.do(
             MoveTo((self.interface.width, self.main_character.y), 10))
 
-        for character in self.characters:
-            with suppress(Exception):
-                self.remove(character.sprite)
-
-        for explosion in self.explosions:
-            with suppress(Exception):
-                self.remove(explosion)
+        for _, child in self.children:
+            if child not in (self.main_character, self.background):
+                self.remove(child)
 
         self.explosions = []
         self.collision_manager.clear()
-        if self.toaster:
-            self.remove(self.toaster)
-
-        if self.toaster_back:
-            self.remove(self.toaster_back)
 
         self.toaster = CollidableSprite("toaster00_future.svg")
         self.toaster.scale = 0.1
@@ -271,13 +260,14 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.add(self.toaster)
         self.collision_manager.add(self.toaster)
 
-        self.toaster_back = CollidableSprite("toaster00_past.svg")
-        self.toaster_back.scale = 0.1
-        self.toaster_back.position = (2 * random.randint(0, self.width) / 3 +
-                                      self.width / 3), (random.randint(
-                                          0, round(2 * self.height / 3)))
-        self.add(self.toaster_back)
-        self.collision_manager.add(self.toaster_back)
+        if self.meta["current_world"] != 0:
+            self.toaster_back = CollidableSprite("toaster00_past.svg")
+            self.toaster_back.scale = 0.1
+            self.toaster_back.position = (2 * random.randint(0, self.width) / 3
+                                          + self.width / 3), (random.randint(
+                                              0, round(2 * self.height / 3)))
+            self.add(self.toaster_back)
+            self.collision_manager.add(self.toaster_back)
 
         self.current_screen += 1
         for character in self.characters:

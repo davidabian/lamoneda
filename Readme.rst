@@ -134,4 +134,13 @@ tests and behavioral tests using::
 Installation notes
 ------------------
 
-Requires pyaudio, and python sdl mixer
+Install pipenv::
+
+    pip install --user pipenv
+    export PATH=$PATH:~/.local/bin
+
+Install current package::
+
+    pipenv install
+    pipenv run pip install -e .
+    pipenv run thecoin --species=etc/species.ini
