@@ -260,13 +260,14 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.add(self.toaster)
         self.collision_manager.add(self.toaster)
 
-        self.toaster_back = CollidableSprite("toaster00_past.svg")
-        self.toaster_back.scale = 0.1
-        self.toaster_back.position = (2 * random.randint(0, self.width) / 3 +
-                                      self.width / 3), (random.randint(
-                                          0, round(2 * self.height / 3)))
-        self.add(self.toaster_back)
-        self.collision_manager.add(self.toaster_back)
+        if self.meta["current_world"] != 0:
+            self.toaster_back = CollidableSprite("toaster00_past.svg")
+            self.toaster_back.scale = 0.1
+            self.toaster_back.position = (2 * random.randint(0, self.width) / 3
+                                          + self.width / 3), (random.randint(
+                                              0, round(2 * self.height / 3)))
+            self.add(self.toaster_back)
+            self.collision_manager.add(self.toaster_back)
 
         self.current_screen += 1
         for character in self.characters:
