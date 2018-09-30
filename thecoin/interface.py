@@ -108,6 +108,8 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
     def update_timer(self, *args, **kwargs):
         """Update timer."""
         if self.timer >= len(self.game.state):
+            self.meta['current_world'] = self.timer
+            self.meta['switch_world'] = True
             move_to(self.game, self.timer - 1, len(self.game.state) + 5)
             director.replace(FadeTRTransition(self.meta['scenes']['runner']))
 
@@ -149,6 +151,14 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.schedule_interval(self.check_collisions, 0.1)
         self.schedule_interval(self.check_finished, 0.1)
 
+    def switch_world(self):
+        """Switch to a specific world."""
+        self.current_screen = 0
+        self.interface = Interface(
+            5, self.game.state[self.meta['current_world']].characters,
+            *director.get_window_size())
+        self.do_draw()
+
     def do_draw(self):
         """Draw a screen."""
         self.main_character.x = 0
@@ -186,6 +196,10 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
     def check_finished(self, *args, **kwargs):
         """Check if has finished."""
+        if self.meta.get('switch_world'):
+            self.meta['switch_world'] = False
+            self.switch_world()
+
         if self.main_character.x > self.interface.width:
             self.do_draw()
 
