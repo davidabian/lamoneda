@@ -98,7 +98,7 @@ class TheCoinLayer(cocos.layer.ColorLayer, Layer):
         self.add(toaster_sprite)
         self.has_ran = False
         self.schedule_interval(self.run, 4)
- 
+
     def run(self, *args):
         if not self.has_ran:
             self.has_ran = True
@@ -197,10 +197,10 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface, meta):
         super().__init__(242, 242, 242, 255)
 
-        background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
-        background_sprite.position = (0, 0)
-        background_sprite.scale = 0.1
-        self.add(background_sprite, z=0)
+        self.background = Sprite('fondo_final.svg', anchor=(0, 0))
+        self.background.position = (0, 0)
+        self.background.scale = 0.1
+        self.add(self.background, z=0)
 
         self.game = game
         self.toaster = None
@@ -238,21 +238,12 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.main_character.do(
             MoveTo((self.interface.width, self.main_character.y), 10))
 
-        for character in self.characters:
-            with suppress(Exception):
-                self.remove(character.sprite)
-
-        for explosion in self.explosions:
-            with suppress(Exception):
-                self.remove(explosion)
+        for _, child in self.children:
+            if child not in (self.main_character, self.background):
+                self.remove(child)
 
         self.explosions = []
         self.collision_manager.clear()
-        if self.toaster:
-            self.remove(self.toaster)
-
-        if self.toaster_back:
-            self.remove(self.toaster_back)
 
         self.toaster = CollidableSprite("toaster00_future.svg")
         self.toaster.scale = 0.1
