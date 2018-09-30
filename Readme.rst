@@ -131,25 +131,7 @@ tests and behavioral tests using::
 
         pipenv run python setup.py test
 
+Installation notes
+------------------
 
-Docker
-------
-
-This package can be run with docker.
-
-Default entry_point will be executed (thecoin) by default
-
-This builds the docker for a SPECIFIC distributable release, that you need to
-have previously built.
-
-For this, do a release::
-
-    python setup.py sdist
-
-Grab the redistributable files::
-
-    distrib=($(/bin/ls -t dist))
-
-Now run docker build with it::
-
-    docker build --build-arg distfile=${distrib[1]}
+Requires pyaudio, and python sdl mixer
