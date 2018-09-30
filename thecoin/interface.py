@@ -172,7 +172,7 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
         else:
             self.timer -= 1
             if self.timer <= 0:
-                self.timer = 1
+                self.timer = 0
 
         if future and self.timer == self.meta["current_world"] + 5:
             self.meta['current_world'] = self.meta['current_world'] + 5
