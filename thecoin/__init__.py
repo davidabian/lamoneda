@@ -15,6 +15,7 @@ from docopt import docopt
 from thecoin.models import Game, World, Species, Being
 from thecoin.interface import RunnerLayer
 from thecoin.interface import ToasterLayer
+from thecoin.interface import TheCoinLayer
 from thecoin.interface import Interface
 from thecoin.rules import move_to
 
@@ -30,6 +31,7 @@ def main():
       -h --help           Show this screen.
       --species=<config>  Species definition file
     """
+    director.init()
     options = docopt(main.__doc__)
     species_config = configparser.ConfigParser()
     species_config.read(options['--species'])
@@ -53,15 +55,17 @@ def main():
 
     initial_world = World(species, 0)
     game = Game(state=[initial_world])
-    move_to(game, 0, 5)
-    director.init()
     interface = Interface(5, game.state[0].characters,
                           *director.get_window_size())
     meta = {}
     runner = RunnerLayer(game, interface, meta)
     toaster = ToasterLayer(game, interface, meta)
+    initial = TheCoinLayer(game, interface, meta)
+
     meta['scenes'] = {
         'runner': scene.Scene(runner),
-        'toaster': scene.Scene(toaster)
+        'toaster': scene.Scene(toaster),
+        'initial': scene.Scene(initial)
     }
-    director.run(meta['scenes']['runner'])
+
+    director.run(meta['scenes']['initial'])

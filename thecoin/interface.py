@@ -84,6 +84,30 @@ class Interface:
         return self._screens
 
 
+class TheCoinLayer(cocos.layer.ColorLayer, Layer):
+    """The initial layer."""
+
+    def __init__(self, game, interface, meta):
+        self.meta = meta
+        self.game = game
+        super().__init__(203, 207, 243, 255)
+        toaster_sprite = Sprite('moneda.svg')
+        toaster_sprite.scale = 0.5
+        toaster_sprite.position = (director.get_window_size()[0] / 2,
+                                   director.get_window_size()[1] / 2)
+        self.add(toaster_sprite)
+        self.has_ran = False
+        self.schedule_interval(self.run, 4)
+ 
+    def run(self, *args):
+        if not self.has_ran:
+            self.has_ran = True
+            move_to(self.game, 0, 5)
+            with suppress(Exception):
+                director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
+
+
 class ToasterLayer(cocos.layer.ColorLayer, Layer):
     """Travel trough time."""
 
