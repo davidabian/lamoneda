@@ -8,6 +8,7 @@ import random
 import glob
 
 import cocos
+import pygame
 from cocos.text import Label
 from cocos import scene
 from cocos.layer import Layer
@@ -16,6 +17,7 @@ from cocos.scenes import FadeTRTransition
 from cocos.actions import JumpTo, MoveTo
 from cocos.collision_model import CollisionManagerBruteForce
 from cocos.sprite import Sprite
+from cocos.audio.pygame.mixer import Sound
 
 import pyglet
 import pyglet.window.key
@@ -90,6 +92,9 @@ class TheCoinLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface, meta):
         self.meta = meta
         self.game = game
+        pygame.mixer.init()
+        pygame.mixer.music.load('audio/mariocoin.mp3')
+        pygame.mixer.music.play()
         super().__init__(203, 207, 243, 255)
         toaster_sprite = Sprite('moneda.svg')
         toaster_sprite.scale = 0.5
@@ -98,7 +103,7 @@ class TheCoinLayer(cocos.layer.ColorLayer, Layer):
         self.add(toaster_sprite)
         self.has_ran = False
         self.schedule_interval(self.run, 4)
- 
+
     def run(self, *args):
         if not self.has_ran:
             self.has_ran = True
@@ -197,6 +202,10 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
     def __init__(self, game, interface, meta):
         super().__init__(242, 242, 242, 255)
 
+
+        self.has_ran = False
+        self.schedule_interval(self.run, 4)
+
         background_sprite = Sprite('fondo_final.svg', anchor=(0, 0))
         background_sprite.position = (0, 0)
         background_sprite.scale = 0.1
@@ -278,6 +287,13 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
 
         self.draw()
 
+    def run(self, *args):
+        if not self.has_ran:
+            self.has_ran = True
+            pygame.mixer.init()
+            pygame.mixer.music.load('audio/Myvatn.mp3')
+            pygame.mixer.music.play(-1)
+
     def check_finished(self, *args, **kwargs):
         """Check if has finished."""
         if self.meta.get('switch_world'):
@@ -298,6 +314,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                 self.toaster.scale = 0.1
                 self.toaster.position = position
                 self.add(self.toaster)
+                pygame.mixer.music.fadeout(1)
                 with suppress(Exception):
                     director.replace(
                         FadeTRTransition(self.meta['scenes']['toaster']))
