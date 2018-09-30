@@ -84,8 +84,57 @@ class Interface:
         return self._screens
 
 
+class TheCoinLayer(cocos.layer.ColorLayer, Layer):
+    """The initial layer."""
+
+    def __init__(self, game, interface, meta):
+        self.meta = meta
+        self.game = game
+        super().__init__(203, 207, 243, 255)
+        toaster_sprite = Sprite('moneda.svg')
+        toaster_sprite.scale = 0.5
+        toaster_sprite.position = (director.get_window_size()[0] / 2,
+                                   director.get_window_size()[1] / 2)
+        self.add(toaster_sprite)
+        self.has_ran = False
+        self.schedule_interval(self.run, 4)
+ 
+    def run(self, *args):
+        if not self.has_ran:
+            self.has_ran = True
+            move_to(self.game, 0, 5)
+            with suppress(Exception):
+                director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
+
+
 class ToasterLayer(cocos.layer.ColorLayer, Layer):
-    """Travel trough time."""
+    r"""Travel trough time
+
+
+    ::
+
+           __---~~~~--__                      __--~~~~---__
+      `\---~~~~~~~~\\                    //~~~~~~~~---/'
+        \/~~~~~~~~~\||                  ||/~~~~~~~~~\/
+                    `\\                //'
+                      `\\            //'
+                        ||          ||
+              ______--~~~~~~~~~~~~~~~~~~--______
+         ___ // _-~                        ~-_ \\ ___
+        `\__)\/~                              ~\/(__/'
+         _--`-___                            ___-'--_
+       /~     `\ ~~~~~~~~------------~~~~~~~~ /'     ~\
+      /|        `\         ________         /'        |\
+     | `\   ______`\_      \------/      _/'______   /' |
+     |   `\_~-_____\ ~-________________-~ /_____-~_/'   |
+     `.     ~-__________________________________-~     .'
+      `.      [_______/------|~~|------\_______]      .'
+       `\--___((____)(________\/________)(____))___--/'
+        |>>>>>>||                            ||<<<<<<|
+        `\<<<<</'                            `\>>>>>/'
+
+    """
 
     def __init__(self, game, interface, meta):
         super().__init__(211, 214, 246, 255)
@@ -107,35 +156,37 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
 
     def update_timer(self, *args, **kwargs):
         """Update timer."""
-        if self.timer >= len(self.game.state):
-            self.meta['current_world'] = self.timer
+        future = self.meta.get('direction_future')
+        if self.meta['current_world'] == 0 and not future:
+            with suppress(Exception):
+                return director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
+
+        if future:
+            self.timer += 1
+        else:
+            self.timer -= 1
+            if self.timer <= 0:
+                self.timer = 1
+
+        if future and self.timer == self.meta["current_world"] + 5:
+            self.meta['current_world'] = self.meta['current_world'] + 5
             self.meta['switch_world'] = True
             move_to(self.game, self.timer - 1, len(self.game.state) + 5)
             with suppress(Exception):
                 return director.replace(
                     FadeTRTransition(self.meta['scenes']['runner']))
 
-        if self.meta.get('direction_future'):
-            self.timer += 1
-        else:
-            self.timer -= 1
-            if self.timer <= 0:
-                self.timer = 0
-                self.meta['current_world'] = self.timer
-                self.meta['switch_world'] = True
-                move_to(self.game, self.timer, len(self.game.state) + 5)
-                with suppress(Exception):
-                    return director.replace(
-                        FadeTRTransition(self.meta['scenes']['runner']))
-            if self.timer < self.meta['current_world'] - 5:
-                self.meta['current_world'] = self.timer
-                self.meta['switch_world'] = True
-                move_to(self.game, self.timer - 1, len(self.game.state) + 5)
-                with suppress(Exception):
-                    return director.replace(
-                        FadeTRTransition(self.meta['scenes']['runner']))
+        if not future and self.timer == self.meta["current_world"] - 5:
+            self.meta['current_world'] = self.meta['current_world'] - 5
+            self.meta['switch_world'] = True
+            move_to(self.game, self.timer, len(self.game.state) + 5)
+            with suppress(Exception):
+                return director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
+
         self.label.element.text = "%s -> %s" % (self.meta["current_world"],
-                                                str(self.timer))
+                                                self.timer)
 
 
 class RunnerLayer(cocos.layer.ColorLayer, Layer):
@@ -203,7 +254,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         if self.toaster_back:
             self.remove(self.toaster_back)
 
-        self.toaster = CollidableSprite("toaster00.svg")
+        self.toaster = CollidableSprite("toaster00_future.svg")
         self.toaster.scale = 0.1
         self.toaster.position = (2 * random.randint(0, self.width) / 3 +
                                  self.width / 3), (random.randint(
@@ -211,7 +262,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         self.add(self.toaster)
         self.collision_manager.add(self.toaster)
 
-        self.toaster_back = CollidableSprite("toaster00.svg")
+        self.toaster_back = CollidableSprite("toaster00_past.svg")
         self.toaster_back.scale = 0.1
         self.toaster_back.position = (2 * random.randint(0, self.width) / 3 +
                                       self.width / 3), (random.randint(

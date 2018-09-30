@@ -76,4 +76,5 @@ def move_to(game, when, expected_length=10):
                 ken.run()
                 current_specie.beings.extend(ken.result)
             species.append(current_specie)
+        print(species)
         game.state.append(World(species, world.time + 1))
