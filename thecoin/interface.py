@@ -96,11 +96,11 @@ class TheCoinLayer(cocos.layer.ColorLayer, Layer):
         pygame.mixer.music.load('audio/mariocoin.mp3')
         pygame.mixer.music.play()
         super().__init__(203, 207, 243, 255)
-        toaster_sprite = Sprite('moneda.svg')
-        toaster_sprite.scale = 0.5
-        toaster_sprite.position = (director.get_window_size()[0] / 2,
+        initial_sprite = Sprite('moneda.svg')
+        initial_sprite.scale = 0.5
+        initial_sprite.position = (director.get_window_size()[0] / 2,
                                    director.get_window_size()[1] / 2)
-        self.add(toaster_sprite)
+        self.add(initial_sprite)
         self.has_ran = False
         self.schedule_interval(self.run, 4)
 
@@ -146,6 +146,8 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
         self.game = game
         self.meta = meta
         self.interface = interface
+        self.has_ran = False
+        self.schedule_interval(self.run, 4)
 
         toaster_sprite = Sprite('toaster11.svg')
         toaster_sprite.scale = 0.5
@@ -163,6 +165,7 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
         """Update timer."""
         future = self.meta.get('direction_future')
         if self.meta['current_world'] == 0 and not future:
+            pygame.mixer.music.fadeout(1)
             with suppress(Exception):
                 return director.replace(
                     FadeTRTransition(self.meta['scenes']['runner']))
@@ -178,6 +181,7 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
             self.meta['current_world'] = self.meta['current_world'] + 5
             self.meta['switch_world'] = True
             move_to(self.game, self.timer - 1, len(self.game.state) + 5)
+            pygame.mixer.music.fadeout(1)
             with suppress(Exception):
                 return director.replace(
                     FadeTRTransition(self.meta['scenes']['runner']))
@@ -186,12 +190,20 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
             self.meta['current_world'] = self.meta['current_world'] - 5
             self.meta['switch_world'] = True
             move_to(self.game, self.timer, len(self.game.state) + 5)
+            pygame.mixer.music.fadeout(1)
             with suppress(Exception):
                 return director.replace(
                     FadeTRTransition(self.meta['scenes']['runner']))
 
         self.label.element.text = "%s -> %s" % (self.meta["current_world"],
                                                 self.timer)
+
+    def run(self, *args):
+        if not self.has_ran:
+            self.has_ran = True
+            pygame.mixer.init()
+            pygame.mixer.music.load('audio/clock.mp3')
+            pygame.mixer.music.play()
 
 
 class RunnerLayer(cocos.layer.ColorLayer, Layer):
@@ -317,6 +329,7 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                 self.toaster_back.scale = 0.1
                 self.toaster_back.position = position
                 self.add(self.toaster_back)
+                pygame.mixer.music.fadeout(1)
                 with suppress(Exception):
                     director.replace(
                         FadeTRTransition(self.meta['scenes']['toaster']))
