@@ -33,9 +33,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-2.5433859"
-     inkscape:cy="88.974365"
+     inkscape:zoom="1.0154386"
+     inkscape:cx="23.338393"
+     inkscape:cy="120.41431"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,13 +66,13 @@
      id="layer1"
      transform="translate(-44.101196,-64.422623)">
     <circle
-       style="fill:#e0b31e;fill-opacity:1;stroke:#666666;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#a4abec;fill-opacity:1;stroke:#2430a4;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="path2049-2"
        r="32.505951"
        cy="97.428574"
        cx="80.130951" />
     <circle
-       style="fill:#e0b31e;fill-opacity:1;stroke:#666666;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#a4abec;fill-opacity:1;stroke:#2430a4;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="path2049"
        r="32.505951"
        cy="100.0744"
@@ -86,7 +86,7 @@
        d=""
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#e0893b;fill-opacity:1;stroke:#666666;stroke-width:1.12995529;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#4755d8;fill-opacity:1;stroke:#b8bdf0;stroke-width:1.13;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect2112"
        width="19.219328"
        height="22.636099"
@@ -94,17 +94,17 @@
        y="85.532623"
        ry="3.6558621" />
     <path
-       style="fill:#7e1f1f;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#1b2581;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 67.677169,108.16872 -5.63236,21.02025 4.772573,1.83665 7.015824,1.40317 3.651911,0.19881 6.283854,-0.94494 5.766319,-1.39203 2.864845,-1.58205 -5.50363,-20.53986 z"
        id="path2124"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#666666;stroke-width:1.12995529;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#b8bdf0;stroke-width:1.12995529;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 62.04481,129.18897 5.632359,-21.02025 h 19.219327 l 5.50364,20.53986"
        id="path2114"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#b8bdf0;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect2116"
        width="4.6302085"
        height="6.1421127"
@@ -112,7 +112,7 @@
        y="91.097466"
        ry="2.3151042" />
     <path
-       style="fill:#050505;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#050505;fill-opacity:1;stroke:#070921;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="path2118"
        sodipodi:type="arc"
        sodipodi:cx="85.7061"
@@ -123,12 +123,12 @@
        sodipodi:end="6.2073857"
        d="m 86.178571,94.215775 a 0.47247022,0.47247022 0 0 1 -0.463518,0.472385 0.47247022,0.47247022 0 0 1 -0.481083,-0.454483 0.47247022,0.47247022 0 0 1 0.445285,-0.489609 0.47247022,0.47247022 0 0 1 0.497959,0.435928 l -0.471114,0.03578 z" />
     <path
-       style="fill:none;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#b8bdf0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 86.72896,102.56142 H 80.849032"
        id="path2120"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;stroke:#b8bdf0;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 77.485118,132.6276 -3.401786,-17.81212 h 5.669643 l 4.015997,16.86718"
        id="path2122"
        inkscape:connector-curvature="0"
@@ -146,159 +146,159 @@
        id="text2168">
       <path
          d="m 57.602776,117.89627 -2.464432,2.36511 -0.467319,-0.48695 2.035262,-1.95323 -0.999587,-1.04156 0.429171,-0.41188 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2199" />
       <path
          d="m 53.55046,117.68128 -0.465808,0.36993 -1.26489,-1.5927 0.465808,-0.36994 0.422578,0.5321 1.743196,-1.38441 -0.422579,-0.53209 0.465808,-0.36994 1.26489,1.5927 -0.465808,0.36994 -0.422578,-0.5321 -1.743196,1.38441 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2201" />
       <path
          d="m 52.434987,114.07223 0.852075,-0.54455 -0.241473,-0.37784 q -0.173713,-0.27182 -0.335238,-0.32064 -0.162758,-0.0507 -0.392162,0.0959 -0.233261,0.14908 -0.262744,0.32811 -0.02948,0.17904 0.138069,0.44121 z m -1.121962,0.71703 0.668936,-0.42751 -0.241473,-0.37784 q -0.137985,-0.21591 -0.273,-0.25724 -0.136247,-0.0433 -0.313602,0.0701 -0.177355,0.11335 -0.196025,0.25832 -0.02183,0.14428 0.11369,0.35633 z m -0.101905,0.83893 -0.592595,-0.92726 q -0.306769,-0.48001 -0.277632,-0.83802 0.02598,-0.35871 0.388399,-0.59033 0.277599,-0.17741 0.524917,-0.13455 0.247318,0.0429 0.448556,0.30252 -0.177901,-0.35059 -0.09493,-0.63712 0.08174,-0.28845 0.421024,-0.50528 0.416399,-0.26611 0.763554,-0.13501 0.347154,0.13111 0.708132,0.69594 l 0.592595,0.92726 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2203" />
       <path
          d="m 51.614588,109.39817 0.941126,1.90822 -3.063407,1.51086 -0.941125,-1.90822 0.53348,-0.26311 0.642596,1.30293 0.660695,-0.32586 -0.581879,-1.17981 0.53348,-0.26311 0.581879,1.17981 0.802272,-0.39567 -0.642597,-1.30293 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2205" />
       <path
          d="m 49.338068,107.92175 q -0.01431,-0.10175 0.03231,-0.19602 0.0437,-0.0956 0.210319,-0.269 l 0.950726,-0.9935 0.24826,0.69844 -0.674776,0.6769 q -0.02836,0.0295 -0.07876,0.079 -0.30378,0.2998 -0.221793,0.53045 l 0.07203,0.20264 1.271861,-0.45208 0.226039,0.63593 -3.218455,1.14399 -0.326416,-0.91833 q -0.220675,-0.62084 -0.09657,-0.96846 0.123336,-0.34977 0.619146,-0.526 0.331977,-0.118 0.585613,-0.026 0.253636,0.0919 0.400477,0.38211 z m -0.873673,1.23077 0.877368,-0.31185 -0.106506,-0.29965 q -0.09271,-0.26084 -0.233876,-0.33692 -0.144084,-0.0775 -0.379055,0.006 -0.234971,0.0835 -0.296445,0.23163 -0.06147,0.14811 0.03201,0.4111 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2207" />
       <path
          d="m 49.247316,106.50211 -2.102659,0.47267 -0.148022,-0.65848 2.267837,-0.5098 q 0.249998,-0.0562 0.364253,-0.21554 0.112023,-0.15884 0.06134,-0.38428 -0.05068,-0.22545 -0.219903,-0.32107 -0.171456,-0.0951 -0.421454,-0.0389 l -2.267836,0.5098 -0.148022,-0.65848 2.10266,-0.47266 q 0.678565,-0.15254 1.047312,0.0483 0.368746,0.20084 0.50322,0.79905 0.133972,0.59598 -0.112845,0.93754 -0.247319,0.33933 -0.925885,0.49187 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2209" />
       <path
          d="m 46.493491,103.85324 -0.0802,-0.80131 1.450519,-0.55444 -1.531403,-0.2537 -0.08066,-0.80586 3.398741,-0.34017 0.05787,0.57822 -2.722635,0.2725 1.522522,0.21089 0.05354,0.53497 -1.450067,0.51302 2.722635,-0.27251 0.05787,0.57822 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2211" />
       <path
          d="m 48.363822,96.720362 q -0.261932,0.479058 -0.497269,0.629235 -0.237603,0.149866 -0.595732,0.100788 -0.460128,-0.06305 -0.682678,-0.39375 -0.222549,-0.330695 -0.152039,-0.845223 0.03199,-0.233464 0.118387,-0.459473 0.08413,-0.226319 0.219765,-0.440962 l 0.652792,0.08946 q -0.181374,0.194519 -0.291147,0.405778 -0.109773,0.211259 -0.139592,0.428857 -0.03324,0.24253 0.04652,0.385085 0.07976,0.142555 0.261091,0.167405 0.140532,0.01926 0.246199,-0.06094 0.103712,-0.08277 0.255779,-0.36675 l 0.148247,-0.272954 q 0.20551,-0.387494 0.478976,-0.546301 0.273467,-0.158807 0.649729,-0.107244 0.512261,0.0702 0.724502,0.408719 0.210284,0.335942 0.126417,0.947935 -0.03448,0.251597 -0.130467,0.497074 -0.09341,0.243521 -0.243581,0.463099 L 48.8684,97.655461 q 0.22705,-0.241371 0.354151,-0.477966 0.127411,-0.238862 0.160957,-0.483659 0.03386,-0.247064 -0.05857,-0.398283 -0.0947,-0.151529 -0.296426,-0.179174 -0.151865,-0.02081 -0.277622,0.05432 -0.128023,0.07482 -0.217363,0.238081 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2213" />
       <path
          d="m 47.637028,93.214401 q -0.06339,0.250631 0.175808,0.433848 0.236984,0.182657 0.833619,0.333569 0.594417,0.150352 0.891964,0.1029 0.29533,-0.04801 0.358724,-0.298644 0.06396,-0.252849 -0.173029,-0.435506 -0.239202,-0.183217 -0.833619,-0.333568 -0.596634,-0.150913 -0.891964,-0.1029 -0.297547,0.04745 -0.361503,0.300301 z m 0.837196,1.448335 q -0.849484,-0.214868 -1.210153,-0.617599 -0.360108,-0.404949 -0.214806,-0.979404 0.145864,-0.576673 0.65464,-0.759487 0.509338,-0.185032 1.358821,0.02984 0.847266,0.214307 1.207374,0.619256 0.360669,0.402731 0.214806,0.979404 -0.145302,0.574455 -0.65464,0.759487 -0.508776,0.182814 -1.356042,-0.03149 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2215" />
       <path
          d="m 49.005801,89.185274 -0.504123,1.362497 0.690903,0.255634 0.458872,-1.240193 0.557872,0.206412 -0.458871,1.240194 1.396827,0.516826 -0.234199,0.63297 -3.203476,-1.185285 0.738323,-1.995467 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2217" />
       <path
          d="m 52.519458,88.336032 -0.297489,0.605807 -2.536172,-1.245421 -0.382198,0.778307 -0.529824,-0.260176 1.061885,-2.162421 0.529824,0.260177 -0.382198,0.778307 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2219" />
       <path
          d="m 50.090186,85.574104 0.310947,-0.501715 2.260273,1.112846 -1.22327,-1.105358 0.295279,-0.476435 1.559526,0.562806 -2.030076,-1.484269 0.313357,-0.505604 2.696035,2.133869 -0.331435,0.534774 -1.729478,-0.614306 1.33296,1.254089 -0.329025,0.530884 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2221" />
       <path
          d="m 53.107085,82.160366 0.919801,1.099595 0.386551,-0.507946 z m -0.740948,-0.04637 0.500161,-0.657235 3.2765,1.334833 -0.408719,0.537076 -0.799264,-0.343751 -0.547268,0.719136 0.547106,0.675098 -0.408719,0.537075 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2223" />
       <path
          d="m 56.254076,80.281213 q 0.08337,-0.06006 0.188497,-0.06273 0.105,-0.0059 0.336006,0.0608 l 1.322006,0.37846 -0.502387,0.545039 -0.913299,-0.281768 q -0.03932,-0.01135 -0.10658,-0.0329 -0.40679,-0.129152 -0.572702,0.05085 l -0.145754,0.158128 0.992508,0.91484 -0.45742,0.496254 -2.51155,-2.31501 0.660545,-0.716624 q 0.446566,-0.484479 0.811974,-0.536597 0.366959,-0.0538 0.753869,0.302832 0.259061,0.238788 0.29585,0.506057 0.03679,0.267269 -0.151563,0.532372 z m -1.496065,-0.199751 0.684662,0.631084 0.21553,-0.233828 q 0.18762,-0.203548 0.189186,-0.3639 0.0014,-0.163586 -0.181928,-0.332598 -0.183362,-0.169013 -0.343056,-0.154415 -0.159694,0.0146 -0.348864,0.219829 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2225" />
       <path
          d="m 59.968722,78.978588 -1.582408,1.422321 -2.28336,-2.540359 1.582407,-1.422321 0.397639,0.442394 -1.080461,0.971154 0.492459,0.547887 0.97837,-0.879391 0.397638,0.442393 -0.97837,0.879392 0.597987,0.665291 1.08046,-0.971154 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2227" />
       <path
          d="m 62.024125,75.886994 -1.108772,-1.84803 0.578736,-0.347227 1.195872,1.993204 q 0.131829,0.219723 0.318983,0.278188 0.185977,0.0565 0.38412,-0.06238 0.198144,-0.118881 0.235814,-0.309566 0.03649,-0.192648 -0.09534,-0.412371 l -1.195873,-1.993204 0.578736,-0.347227 1.108771,1.84803 q 0.357821,0.596392 0.282872,1.009544 -0.07495,0.413152 -0.600714,0.728599 -0.523805,0.31427 -0.925578,0.187138 -0.399811,-0.128309 -0.757631,-0.7247 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2229" />
       <path
          d="m 66.464257,74.89515 -0.610483,0.287771 -1.204734,-2.555751 -0.784315,0.369712 -0.251677,-0.533914 2.179114,-1.027194 0.251677,0.533914 -0.784316,0.369712 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2231" />
       <path
          d="m 70.467568,70.491109 0.227819,0.975827 0.269577,-0.06294 q 0.323048,-0.07542 0.42678,-0.214754 0.105961,-0.139856 0.04303,-0.409434 -0.06294,-0.269577 -0.21987,-0.348057 -0.154706,-0.079 -0.477753,-0.0036 z m -0.786228,-0.399083 0.902306,-0.210654 q 0.688425,-0.160722 1.046408,0.01413 0.360211,0.174332 0.488684,0.724627 0.128473,0.550295 -0.117308,0.866104 -0.243554,0.315289 -0.93198,0.47601 l -0.24507,0.05721 0.290754,1.245405 -0.657235,0.153439 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2233" />
       <path
          d="m 74.487699,71.040817 q 0.102389,0.0086 0.183988,0.07492 0.0836,0.0638 0.215728,0.264684 l 0.758215,1.147189 -0.736088,0.08737 -0.5106,-0.807959 q -0.02249,-0.03419 -0.05958,-0.0943 -0.225051,-0.362644 -0.468142,-0.33379 l -0.213556,0.02535 0.1591,1.340407 -0.670203,0.07955 -0.402606,-3.391912 0.96782,-0.114876 q 0.6543,-0.07766 0.96579,0.120361 0.313762,0.197754 0.375785,0.720286 0.04153,0.349869 -0.104324,0.576834 -0.145851,0.226966 -0.461332,0.305882 z m -1.006659,-1.124612 0.109752,0.924654 0.315791,-0.03748 q 0.274897,-0.03263 0.380361,-0.153429 0.107466,-0.123343 0.07807,-0.370977 -0.02939,-0.247635 -0.160204,-0.340391 -0.130812,-0.09276 -0.407981,-0.05986 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2235" />
       <path
          d="m 77.043873,69.723042 -0.312117,1.399188 0.638297,-0.0027 z m -0.414406,-0.615973 0.825897,-0.0035 0.936371,3.411809 -0.674902,0.0028 -0.214034,-0.843313 -0.903682,0.0038 -0.202347,0.845067 -0.674903,0.0028 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2237" />
       <path
          d="m 80.964547,72.796388 -2.114256,-0.238599 0.383043,-3.394177 2.114256,0.2386 -0.0667,0.591082 -1.443605,-0.162915 -0.08261,0.732033 1.307201,0.147521 -0.0667,0.591083 -1.307202,-0.147522 -0.100314,0.888897 1.443605,0.162915 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2239" />
       <path
          d="m 83.720062,73.395826 -2.073673,-0.476329 0.764687,-3.329026 2.073673,0.476329 -0.133167,0.579737 -1.415895,-0.325236 -0.164923,0.717982 1.28211,0.294504 -0.133168,0.579737 -1.282109,-0.294505 -0.200263,0.871835 1.415895,0.325235 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2241" />
       <path
          d="m 85.613294,72.432342 q -0.418633,-0.350503 -0.519923,-0.61065 -0.100542,-0.26231 0.01758,-0.603943 0.151761,-0.438933 0.519572,-0.592564 0.367811,-0.153632 0.858638,0.01607 0.22271,0.077 0.427477,0.205898 0.205515,0.126733 0.389511,0.301703 L 87.09084,71.77158 q -0.155323,-0.215891 -0.341056,-0.364833 -0.185733,-0.148942 -0.393307,-0.220711 -0.231359,-0.07999 -0.386752,-0.02963 -0.155394,0.05036 -0.215202,0.223342 -0.04635,0.134058 0.01165,0.253361 0.06091,0.117888 0.309692,0.32252 l 0.238719,0.198732 q 0.339861,0.277274 0.442163,0.576503 0.102302,0.299228 -0.0218,0.658159 -0.168956,0.488664 -0.542426,0.630656 -0.370559,0.140578 -0.954362,-0.06127 -0.240008,-0.08298 -0.461992,-0.225094 -0.220571,-0.139201 -0.406568,-0.329387 l 0.228016,-0.65948 q 0.192346,0.269843 0.39954,0.44073 0.209356,0.171635 0.442877,0.252375 0.235683,0.08149 0.402049,0.02039 0.167114,-0.06326 0.23365,-0.255695 0.05009,-0.144869 9.79e-4,-0.282885 -0.04836,-0.140177 -0.191011,-0.259699 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2243" />
       <path
          d="m 88.375065,73.522224 q -0.381088,-0.390995 -0.455583,-0.660043 -0.07353,-0.271124 0.07849,-0.599078 0.19532,-0.421359 0.576768,-0.537054 0.381448,-0.115695 0.852623,0.102718 0.213793,0.0991 0.404494,0.248023 0.191663,0.146844 0.357045,0.339504 l -0.277105,0.59779 q -0.132722,-0.230475 -0.302461,-0.397416 -0.169739,-0.166941 -0.369002,-0.25931 -0.222096,-0.102952 -0.381782,-0.06854 -0.159686,0.03441 -0.23666,0.200463 -0.05965,0.128691 -0.014,0.253242 0.04869,0.123437 0.275532,0.352151 l 0.217424,0.221828 q 0.310116,0.310184 0.381671,0.618215 0.07155,0.308032 -0.08817,0.652592 -0.217451,0.469099 -0.603352,0.572642 -0.382864,0.10243 -0.943293,-0.157356 -0.230398,-0.106801 -0.436894,-0.270607 -0.205381,-0.160768 -0.371217,-0.368768 l 0.293462,-0.633077 q 0.164105,0.287892 0.352979,0.478833 0.190949,0.191903 0.415121,0.295817 0.226247,0.104877 0.397933,0.0609 0.172648,-0.04605 0.258281,-0.230787 0.06447,-0.139069 0.02955,-0.281339 -0.03396,-0.144346 -0.163803,-0.277665 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2245" />
       <path
          d="m 91.411772,76.849334 -1.8355,-1.07608 1.727514,-2.946668 1.8355,1.07608 -0.30084,0.513151 -1.253271,-0.734743 -0.372579,0.635517 1.134852,0.665318 -0.300839,0.513151 -1.134852,-0.665319 -0.452417,0.7717 1.253271,0.734743 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2247" />
       <path
          d="m 93.097214,78.025824 -0.548236,-0.393622 1.647877,-2.295157 -0.704344,-0.505705 0.344253,-0.479474 1.956923,1.405032 -0.344253,0.479474 -0.704343,-0.505704 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2249" />
       <path
          d="m 99.145343,79.51278 q -0.179764,-0.185794 -0.461435,-0.0788 -0.280027,0.105402 -0.722317,0.533336 -0.440645,0.426344 -0.556869,0.704333 -0.11458,0.276399 0.06518,0.462193 0.181355,0.187439 0.461382,0.08204 0.281672,-0.106993 0.722317,-0.533337 0.442289,-0.427934 0.556869,-0.704333 0.116225,-0.277989 -0.06513,-0.465428 z m -1.672138,-0.05023 q 0.629728,-0.60929 1.161981,-0.70406 0.533844,-0.09313 0.94587,0.332722 0.413617,0.427492 0.301344,0.956329 -0.110681,0.530482 -0.740409,1.139772 -0.628084,0.607699 -1.161927,0.700824 -0.532253,0.09477 -0.94587,-0.332722 -0.412027,-0.425847 -0.301345,-0.956329 0.112273,-0.528838 0.740356,-1.136536 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2251" />
       <path
          d="m 100.84473,80.530655 0.50588,0.626589 -0.91014,1.2582 1.42033,-0.626272 0.50876,0.630149 -2.657658,2.145693 -0.365041,-0.45214 2.128979,-1.718855 -1.38947,0.657219 -0.337733,-0.418319 0.932443,-1.223284 -2.128974,1.718854 -0.365041,-0.45214 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2253" />
       <path
          d="m 102.82997,83.050727 0.40198,0.603644 -1.53858,2.168026 2.0661,-1.375863 0.3297,0.495102 -2.84303,1.893238 -0.39945,-0.599835 1.53605,-2.171834 -2.0661,1.375863 -0.329702,-0.495102 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2255" />
       <path
          d="m 104.0726,86.07803 0.52421,-0.281132 0.96125,1.792385 -0.5242,0.281132 -0.32114,-0.598806 -1.96175,1.052082 0.32114,0.598805 -0.5242,0.281132 -0.96126,-1.792384 0.52421,-0.281132 0.32114,0.598806 1.96174,-1.052082 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2257" />
       <path
          d="m 104.52749,89.823724 -0.93445,0.386478 0.17138,0.414371 q 0.12329,0.298094 0.27373,0.374516 0.15132,0.07854 0.4029,-0.02552 0.25581,-0.1058 0.31627,-0.276877 0.0605,-0.171077 -0.0585,-0.4586 z m 1.23043,-0.508893 -0.73361,0.303412 0.17138,0.414372 q 0.0979,0.236784 0.22359,0.301173 0.12654,0.0665 0.32104,-0.01394 0.1945,-0.08044 0.23834,-0.219886 0.0468,-0.138203 -0.0494,-0.370759 z m 0.24762,-0.80801 0.42058,1.016902 q 0.21772,0.526421 0.12618,0.873755 -0.0886,0.348574 -0.48602,0.512958 -0.30443,0.125912 -0.54038,0.04029 -0.23595,-0.08562 -0.38847,-0.376576 0.11358,0.376383 -0.0184,0.643889 -0.13112,0.26962 -0.50321,0.423511 -0.45665,0.188868 -0.77539,-0.0012 -0.31874,-0.190023 -0.57494,-0.809467 l -0.42058,-1.016901 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2259" />
       <path
          d="m 105.09369,92.033117 2.06757,-0.608081 0.19043,0.647486 -2.22999,0.655849 q -0.24582,0.0723 -0.3495,0.23872 -0.10148,0.165775 -0.0363,0.387456 0.0652,0.221682 0.24027,0.306122 0.17727,0.08379 0.4231,0.01149 l 2.22998,-0.655849 0.19043,0.647485 -2.06757,0.608082 q -0.66724,0.196238 -1.04824,0.01974 -0.381,-0.176497 -0.55399,-0.764721 -0.17236,-0.58603 0.0518,-0.942886 0.22478,-0.354661 0.89202,-0.550899 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2261" />
       <path
          d="m 106.29138,95.753721 q 0.10365,-0.536062 0.28209,-0.750758 0.1807,-0.21509 0.53677,-0.277375 0.45748,-0.08002 0.77014,0.167217 0.31267,0.247241 0.40215,0.75881 0.0406,0.232121 0.0271,0.473703 -0.0112,0.241189 -0.0751,0.486936 l -0.64904,0.113532 q 0.11355,-0.240504 0.15379,-0.475155 0.0402,-0.234651 0.002,-0.450997 -0.0422,-0.241136 -0.16156,-0.352641 -0.11937,-0.111504 -0.29966,-0.07997 -0.13972,0.02444 -0.21596,0.133001 -0.0736,0.11042 -0.13198,0.427212 l -0.0581,0.30513 q -0.0778,0.431667 -0.28991,0.666192 -0.21214,0.234525 -0.58624,0.299964 -0.50931,0.08909 -0.81454,-0.168742 -0.30258,-0.255973 -0.40901,-0.864446 -0.0438,-0.250151 -0.0271,-0.513198 0.0148,-0.2604 0.091,-0.515274 l 0.68735,-0.120233 q -0.14278,0.299039 -0.19182,0.563098 -0.0486,0.266313 -0.006,0.509703 0.043,0.245643 0.17705,0.361543 0.13633,0.115506 0.3369,0.08042 0.151,-0.02641 0.24791,-0.136267 0.0992,-0.110249 0.13456,-0.292955 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2263" />
       <path
          d="m 108.04061,101.05465 0.59331,0.0426 -0.14549,2.02867 -0.59331,-0.0426 0.0486,-0.67774 -2.22035,-0.15924 -0.0486,0.67774 -0.59331,-0.0426 0.14549,-2.02867 0.59331,0.0425 -0.0486,0.67775 2.22035,0.15924 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2265" />
       <path
          d="m 104.95124,103.78024 3.3476,0.67881 -0.13413,0.66145 -2.76462,-0.5606 -0.28689,1.41482 -0.58297,-0.11821 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2267" />
       <path
          d="m 104.32574,106.52869 3.2331,1.1019 -0.21772,0.63883 -2.67007,-0.91001 -0.46571,1.36643 -0.56303,-0.19189 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2269" />
       <path
          d="m 105.94319,110.30087 0.53481,0.2604 -0.89034,1.82864 -0.53481,-0.26039 0.29745,-0.61092 -2.00143,-0.97447 -0.29745,0.61092 -0.53481,-0.2604 0.89034,-1.82864 0.53481,0.26039 -0.29745,0.61092 2.00143,0.97447 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2271" />
       <path
          d="m 102.97214,113.03882 q 0.43925,-0.3243 0.71593,-0.36146 0.27861,-0.0359 0.58281,0.15933 0.39084,0.25087 0.45352,0.64452 0.0627,0.39365 -0.21786,0.8307 -0.12729,0.1983 -0.30079,0.36695 -0.17157,0.16988 -0.38495,0.30749 l -0.5545,-0.35592 q 0.24641,-0.1001 0.4349,-0.24553 0.1885,-0.14543 0.30714,-0.33026 0.13224,-0.20601 0.11989,-0.36889 -0.0123,-0.16288 -0.16637,-0.26175 -0.11937,-0.0766 -0.24898,-0.0484 -0.12891,0.0314 -0.38639,0.22501 l -0.24936,0.1852 q -0.34952,0.26499 -0.66443,0.29393 -0.31491,0.0289 -0.63451,-0.1762 -0.43512,-0.2793 -0.48515,-0.67571 -0.0494,-0.39324 0.28433,-0.91308 0.13718,-0.21371 0.32758,-0.39597 0.18723,-0.18158 0.41587,-0.31755 l 0.58723,0.37693 q -0.30756,0.12338 -0.52244,0.28449 -0.21612,0.16304 -0.34959,0.37098 -0.1347,0.20986 -0.11451,0.38593 0.0221,0.17731 0.19347,0.2873 0.12899,0.0828 0.27469,0.0676 0.14763,-0.014 0.29738,-0.12447 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#844600;fill-opacity:1;stroke-width:0.25100702"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.68546486px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono Bold';text-align:start;text-anchor:start;fill:#171f6d;fill-opacity:1;stroke-width:0.25100702"
          id="path2273" />
     </g>
     <rect
-       style="fill:#2a2525;fill-opacity:1;stroke:none;stroke-width:1.05358803;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#0e0e42;fill-opacity:1;stroke:none;stroke-width:1.05358803;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect2176"
        width="21.922619"
        height="5.3861609"
@@ -306,7 +306,7 @@
        y="83.254456"
        ry="2.3151042" />
     <rect
-       style="fill:#2a2525;fill-opacity:1;stroke:none;stroke-width:1.17587888;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#0e0e42;fill-opacity:1;stroke:none;stroke-width:1.17587888;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect2176-2"
        width="21.922619"
        height="6.7090774"
@@ -315,7 +315,7 @@
        ry="2.8837264"
        transform="rotate(-90)" />
     <rect
-       style="fill:#2a2525;fill-opacity:1;stroke:none;stroke-width:1.05358803;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
+       style="fill:#0e0e42;fill-opacity:1;stroke:none;stroke-width:1.05358803;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:54.99659348;stroke-opacity:1"
        id="rect2176-21"
        width="14.185233"
        height="4.73142"
