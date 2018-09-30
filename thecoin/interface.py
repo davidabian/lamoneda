@@ -111,18 +111,29 @@ class ToasterLayer(cocos.layer.ColorLayer, Layer):
             self.meta['current_world'] = self.timer
             self.meta['switch_world'] = True
             move_to(self.game, self.timer - 1, len(self.game.state) + 5)
-            return director.replace(
-                FadeTRTransition(self.meta['scenes']['runner']))
+            with suppress(Exception):
+                return director.replace(
+                    FadeTRTransition(self.meta['scenes']['runner']))
 
         if self.meta.get('direction_future'):
             self.timer += 1
         else:
             self.timer -= 1
-            if self.timer < 0:
+            if self.timer <= 0:
                 self.timer = 0
-                move_to(self.game, 0, len(self.game.state))
-                return director.replace(
-                    FadeTRTransition(self.meta['scenes']['runner']))
+                self.meta['current_world'] = self.timer
+                self.meta['switch_world'] = True
+                move_to(self.game, self.timer, len(self.game.state) + 5)
+                with suppress(Exception):
+                    return director.replace(
+                        FadeTRTransition(self.meta['scenes']['runner']))
+            if self.timer < self.meta['current_world'] - 5:
+                self.meta['current_world'] = self.timer
+                self.meta['switch_world'] = True
+                move_to(self.game, self.timer - 1, len(self.game.state) + 5)
+                with suppress(Exception):
+                    return director.replace(
+                        FadeTRTransition(self.meta['scenes']['runner']))
         self.label.element.text = "%s -> %s" % (self.meta["current_world"],
                                                 str(self.timer))
 
@@ -189,6 +200,9 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
         if self.toaster:
             self.remove(self.toaster)
 
+        if self.toaster_back:
+            self.remove(self.toaster_back)
+
         self.toaster = CollidableSprite("toaster00.svg")
         self.toaster.scale = 0.1
         self.toaster.position = (2 * random.randint(0, self.width) / 3 +
@@ -233,8 +247,9 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                 self.toaster.scale = 0.1
                 self.toaster.position = position
                 self.add(self.toaster)
-                director.replace(
-                    FadeTRTransition(self.meta['scenes']['toaster']))
+                with suppress(Exception):
+                    director.replace(
+                        FadeTRTransition(self.meta['scenes']['toaster']))
 
             if elem == self.toaster_back:
                 position = self.toaster_back.position
@@ -244,9 +259,9 @@ class RunnerLayer(cocos.layer.ColorLayer, Layer):
                 self.toaster_back.scale = 0.1
                 self.toaster_back.position = position
                 self.add(self.toaster_back)
-
-                director.replace(
-                    FadeTRTransition(self.meta['scenes']['toaster']))
+                with suppress(Exception):
+                    director.replace(
+                        FadeTRTransition(self.meta['scenes']['toaster']))
                 continue
             if not id(elem) in self.sprites_by_id:
                 continue
